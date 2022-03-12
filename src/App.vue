@@ -1,10 +1,29 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+import TheNavBar from './components/utils/TheNavBar.vue';
 </script>
 
 <template>
-<router-view></router-view>
+    <TheNavBar/>
+    <router-view></router-view>
 </template>
 
-<style></style>
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+//colors
+$red: #FA4454;
+$white: #fff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 82px 54px 82px 54px;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+</style>
