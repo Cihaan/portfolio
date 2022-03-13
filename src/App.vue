@@ -1,15 +1,12 @@
 <script setup lang="ts">
 import TheNavBar from './components/utils/TheNavBar.vue';
 import TheFooter from './components/utils/TheFooter.vue';
-import TheLanding from './components/TheLanding.vue';
 </script>
 
 <template>
     <div class="container">
         <TheNavBar />
-        <router-view>
-            <TheLanding />
-        </router-view>
+        <router-view></router-view>
     <TheFooter />
     </div>
 </template>

@@ -3,13 +3,16 @@ import App from './App.vue'
 import {createRouter, createWebHistory}  from "vue-router"
 
 import TheNavBar from './components/utils/TheNavBar.vue'
+import TheLanding from './components/TheLanding.vue'
+import TheAbout from './components/TheAbout.vue'
 
 const app = createApp(App)
 
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-      // { path: '/', component: TheNavBar }
+      { path: '/:pathMatch(.*)*', component: TheLanding },
+      { path: '/about', component: TheAbout }
     ],
   })
 

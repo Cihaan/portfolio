@@ -9,16 +9,16 @@
         <img src="../../assets/ck/ck_logo.png" alt="logo" />
         <ul class="navigation">
             <li>
-                <router-link active-class="active" to="/about">About</router-link>
+                <router-link exact-active-class="active" to="/about">About</router-link>
             </li>
             <li>
-                <router-link active-class="active" to="#">Skills</router-link>
+                <router-link exact-active-class="active" to="/skills">Skills</router-link>
             </li>
             <li>
-                <router-link active-class="active" to="#">Projects</router-link>
+                <router-link exact-active-class="active" to="/projects">Projects</router-link>
             </li>
             <li>
-                <router-link active-class="active" to="#">Photos</router-link>
+                <router-link exact-active-class="active" to="/photos">Photos</router-link>
             </li>
         </ul>
     </header>
