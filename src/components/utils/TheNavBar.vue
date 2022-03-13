@@ -9,9 +9,6 @@
         <img src="../../assets/ck/ck_logo.png" alt="logo" />
         <ul class="navigation">
             <li>
-                <router-link active-class="active" class="active" to="/landing">Landing</router-link>
-            </li>
-            <li>
                 <router-link active-class="active" to="/about">About</router-link>
             </li>
             <li>
@@ -33,7 +30,7 @@ $red: #fa4454;
 $black: #000;
 
 #header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
