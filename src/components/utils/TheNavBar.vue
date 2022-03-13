@@ -5,24 +5,32 @@
 </script>
 
 <template>
-
-<header id="header">
-    <a href="#" class="logo"><img src="../../assets/ck/ck_logo.png" alt=""></a>
-    <ul class="navigation">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Photos</a></li>
-    </ul>
-</header>
-
+    <header id="header">
+        <img src="../../assets/ck/ck_logo.png" alt="logo" />
+        <ul class="navigation">
+            <li>
+                <router-link active-class="active" class="active" to="/landing">Landing</router-link>
+            </li>
+            <li>
+                <router-link active-class="active" to="/about">About</router-link>
+            </li>
+            <li>
+                <router-link active-class="active" to="#">Skills</router-link>
+            </li>
+            <li>
+                <router-link active-class="active" to="#">Projects</router-link>
+            </li>
+            <li>
+                <router-link active-class="active" to="#">Photos</router-link>
+            </li>
+        </ul>
+    </header>
 </template>
 
 <style lang="scss" scoped>
 $white: #fff;
-$red: #FA4454;
+$red: #fa4454;
 $black: #000;
-
 
 #header {
     position: absolute;
@@ -52,17 +60,30 @@ $black: #000;
 }
 
 #header .navigation li a {
+    position: relative;
     text-decoration: none;
     padding: 6px 15px;
     color: $black;
-    border-radius: 20px;
-    font-size: 1.20rem;
+    font-size: 1.2rem;
 }
 
-#header .navigation li a:hover,
-#header .navigation li a .active {
+/* Fade in */
+.active::after,
+a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
     background-color: $red;
-    color: $white;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
 }
 
+a:hover::after,
+.active::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+}
 </style>
