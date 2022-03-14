@@ -1,13 +1,28 @@
-<script setup lang="ts">
-
-
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
-    <div class="about">
-        <div class="content">azer</div>
+  <div class="about">
+    <div class="content">
+      <h2>About</h2>
+      <div class="bio">
+        <img src="../assets/ck/ck_pp.png" alt="profile_picture" />
+        <div class="text">
+          <p>
+            Hi I am <span>Cihan</span> ! I am 20, I live in
+            <span>France</span> at Mâcon. Currently studiying
+            <span>computer science</span> at IUT of Dijon. I will integrate
+            <span>ESGI Lyon</span> in web developpement next year. I am
+            passionate about <span>web</span> programming, <span>photography</span>
+            and <span>cats</span>. I make projects such as
+            <span>web sites</span>, <span>web apps</span> and
+            <span>softwares</span> to have fun. Currently seeking for a
+            <span>work-study contract</span> don't hesitate to contact me if
+            you're <span>interested</span> in my profile.
+          </p>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -16,24 +31,24 @@ $red: #fa4454;
 $black: #000;
 
 .about {
-    position: relative;
-    height: 100vh;
+  position: relative;
+  height: 100vh;
 }
 
 .content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    height: 10px;
-    margin-top: -100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  height: 10px;
+  margin-top: -100px;
 }
 
 span {
-    color: $red;
+  color: $red;
 }
 
 /* ----------------------------------------------
@@ -52,7 +67,7 @@ span {
   0% {
     letter-spacing: -0.5em;
     -webkit-transform: translateZ(-700px) translateY(500px);
-            transform: translateZ(-700px) translateY(500px);
+    transform: translateZ(-700px) translateY(500px);
     opacity: 0;
   }
   40% {
@@ -60,7 +75,7 @@ span {
   }
   100% {
     -webkit-transform: translateZ(0) translateY(0);
-            transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
     opacity: 1;
   }
 }
@@ -68,7 +83,7 @@ span {
   0% {
     letter-spacing: -0.5em;
     -webkit-transform: translateZ(-700px) translateY(500px);
-            transform: translateZ(-700px) translateY(500px);
+    transform: translateZ(-700px) translateY(500px);
     opacity: 0;
   }
   40% {
@@ -76,9 +91,8 @@ span {
   }
   100% {
     -webkit-transform: translateZ(0) translateY(0);
-            transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
     opacity: 1;
   }
 }
-
 </style>
