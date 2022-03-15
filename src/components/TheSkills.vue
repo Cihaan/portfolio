@@ -34,22 +34,22 @@
       <div class="skill">
         <img src="../assets/icons/skills/nodejs.svg" alt="nodejsicon" />
         <h3 class="skill-name">NodeJS</h3>
-        <p>Intermediate understanding of the language</p>
+        <p>Good understanding of the service</p>
       </div>
       <div class="skill">
-        <img src="../assets/icons/skills/docker.svg" alt="dockericon" />
+        <img id="docker" src="../assets/icons/skills/docker.svg" alt="dockericon" />
         <h3 class="skill-name">Docker</h3>
         <p>Beginner at Docker</p>
       </div>
       <div class="skill">
         <img src="../assets/icons/skills/angular.svg" alt="angularicon" />
         <h3 class="skill-name">Angular</h3>
-        <p>Intermediate understanding of the language</p>
+        <p>Intermediate understanding of the framework</p>
       </div>
       <div class="skill">
         <img src="../assets/icons/skills/vite.svg" alt="viteicon" />
         <h3 class="skill-name">Vite</h3>
-        <p>deux paragraphes on t'a dit rend pas fou</p>
+        <p>Beginner at Vite</p>
       </div>
     </div>
   </div>
@@ -62,7 +62,7 @@ $black: #000;
 
 .skills {
   position: relative;
-  height: 120vh;
+  height: 140vh;
   -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   text-align: center;
@@ -73,7 +73,7 @@ $black: #000;
   position: absolute;
   padding-top: 350px;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 33.3333333333333333333333333333333333333333333333333333333333333333333333% 33.3333333333333333333333333333333333333333333333333333333333333333333333% 33.3333333333333333333333333333333333333333333333333333333333333333333333%;
   text-align: center;
   align-items: center;
 }
@@ -84,6 +84,7 @@ $black: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 img {
@@ -91,12 +92,13 @@ img {
 }
 
 .title {
-  top: 23.5%;
+  top: 20%;
 }
 
 h3 {
   color: $red;
   font-size: 24px;
+  font-weight: 500;
   padding: 8px 0px 14px 0px;
   font-family: 'Ubuntu', sans-serif;
 }
@@ -105,10 +107,15 @@ p {
   text-align: center;
   font-size: 1.4rem;
   max-width: 50%;
+  height: 20px;
 }
 
 #prisma {
   width: 80px;
+}
+
+#docker {
+  width: 120px;
 }
 
 /* ----------------------------------------------
