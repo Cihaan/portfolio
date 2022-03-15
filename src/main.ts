@@ -6,6 +6,7 @@ import TheNavBar from './components/utils/TheNavBar.vue'
 import TheLanding from './components/TheLanding.vue'
 import TheAbout from './components/TheAbout.vue'
 import TheSkills from './components/TheSkills.vue'
+import TheProjects from './components/TheProjects.vue'
 
 const app = createApp(App)
 
@@ -14,7 +15,8 @@ const router = createRouter({
     routes: [
       { path: '/:pathMatch(.*)*', component: TheLanding },
       { path: '/about', component: TheAbout },
-      { path: '/skills', component: TheSkills }
+      { path: '/skills', component: TheSkills },
+      { path: '/projects', component: TheProjects }
     ],
   })
 
