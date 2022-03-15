@@ -2,12 +2,12 @@
 
 <template>
     <div class="skills">
-    <div class="title">
-    <h2>Skills</h2>
-    </div>
-        <div class="skills-grid">
-        
-        </div>
+      <div class="title">
+        <h2>Skills</h2>
+      </div>
+      <div class="skills-grid">
+
+      </div>
     </div>
 </template>
 
@@ -34,7 +34,6 @@ $black: #000;
     top: 50%;
     height: 100vh;
     margin-top: -100px;
-    background-color: #000;
      overflow-x: auto;
 }
 

@@ -48,7 +48,6 @@ $black: #000;
     background-color: $red;
     z-index: 10000;
     color: $white;
-    // bottom: 0;
 }
 
 .items {

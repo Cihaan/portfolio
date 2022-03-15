@@ -33,7 +33,7 @@ $white: #fff;
 }
 
 .container {
-    min-height: 100%;
+    height: 100%;
     margin: 0px 54px 54px 54px;
     z-index: 1;
 }
