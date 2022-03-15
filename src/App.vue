@@ -58,6 +58,18 @@ p {
     letter-spacing: 2.75;
 }
 
+.title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 28%;
+  margin-top: -100px;
+  text-align: center;
+}
+
 span {
     color: $red;
 }
