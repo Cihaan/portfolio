@@ -48,22 +48,14 @@ h2 {
 h2::after {
     content: "";
     display: block;
-    // bottom: 0px;
-    // left: 50%;
     margin-top: 12px;
-    width: 180px;
+    width: 200px;
     height: 1.5px;
     background: $red;
-    transform: translateX(-22%);
+}
 
-    // content: '';
-    // margin-top: 20px;
-    // background-color: $red;
-    // left: 50%;
-    // top: 50%;
-    // height: 1.5px;
-    // // width: 200%;
-    // display: block;
+p {
+    letter-spacing: 2.75;
 }
 
 span {
