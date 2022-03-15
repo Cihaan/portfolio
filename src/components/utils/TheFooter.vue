@@ -8,7 +8,7 @@
 <div class="footer">
     <div class="items">
         <div class="social">
-            <div class="title">Social</div>
+            <div class="titre">Social</div>
             <hr/>
             <div class="content">
                 <i class="fa-brands fa-linkedin"></i>
@@ -16,14 +16,14 @@
             </div>
         </div>
         <div class="notice">
-            <div class="title">Legal Notice</div>
+            <div class="titre">Legal Notice</div>
             <hr/>
             <div class="content">
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa eveniet quos possimus non? Rem dolorum voluptate esse provident ipsam molestias sunt vero facilis cumque, perferendis quaerat, blanditiis repudiandae eveniet alias.</p>
             </div>
         </div>
         <div class="resume">
-            <div class="title">Resume</div>
+            <div class="titre">Resume</div>
             <hr/>
             <div class="content">
             </div>
@@ -48,6 +48,7 @@ $black: #000;
     background-color: $red;
     z-index: 10000;
     color: $white;
+    // bottom: 0;
 }
 
 .items {
@@ -71,7 +72,7 @@ $black: #000;
     flex-direction: column;
 }
 
-.title {
+.titre {
     font-size: 1.75rem;
     letter-spacing: 2.75;
     flex: 2;

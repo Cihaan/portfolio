@@ -32,8 +32,10 @@ $black: #000;
     align-items: center;
     position: absolute;
     top: 50%;
-    height: 10px;
+    height: 100vh;
     margin-top: -100px;
+    background-color: #000;
+     overflow-x: auto;
 }
 
 
