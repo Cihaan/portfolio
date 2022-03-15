@@ -1,4 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+var age = new Date().getFullYear() - 2002;
+
+</script>
 
 <template>
   <div class="about">
@@ -12,7 +16,7 @@
         Hi I am <span>Cihan</span> !
         </p>
           <p>
-            I am 20, I live in
+            I am {{ age }}, I live in
             <span>France</span> at Mâcon. <br>  Currently studiying
             <span>computer science</span> at IUT of Dijon. <br> I will integrate
             <span>ESGI Lyon</span> in web developpement next year. <br> I am
