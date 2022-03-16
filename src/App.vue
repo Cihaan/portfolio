@@ -7,7 +7,7 @@ import TheFooter from './components/utils/TheFooter.vue';
     <div class="container">
         <TheNavBar />
         <router-view></router-view>
-    <TheFooter />
+    <!-- <TheFooter /> -->
     </div>
 </template>
 
@@ -34,7 +34,7 @@ $white: #fff;
 
 .container {
     height: 100%;
-    margin: 0px 54px 54px 54px;
+    margin: 140px 54px 54px 54px;
     z-index: 1;
 }
 
@@ -64,9 +64,6 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  top: 28%;
-  margin-top: -100px;
   text-align: center;
 }
 

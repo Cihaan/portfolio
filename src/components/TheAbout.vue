@@ -50,9 +50,7 @@ $black: #000;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  top: 40%;
-  margin-top: -100px;
+  padding-top: 70px;
 } 
 
 .bio img {
