@@ -1,4 +1,40 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import TheProject from './utils/TheProject.vue';
+
+const projects = [
+  {
+    title: "VToffle",
+    desc: "Max deux lignes raconte pas ta vie",
+    imagePath: "../assets/projects/VToffle/vtoffle-hand.png",
+  },
+  {
+    title: "VToffle",
+    desc: "Max deux lignes raconte pas ta vie",
+    imagePath: "../assets/projects/VToffle/vtoffle-hand.png",
+  },
+  {
+    title: "VToffle",
+    desc: "Max deux lignes raconte pas ta vie",
+    imagePath: "../assets/projects/VToffle/vtoffle-hand.png",
+  },
+  {
+    title: "VToffle",
+    desc: "Max deux lignes raconte pas ta vie",
+    imagePath: "../assets/projects/VToffle/vtoffle-hand.png",
+  },
+  {
+    title: "VToffle",
+    desc: "Max deux lignes raconte pas ta vie",
+    imagePath: "../assets/projects/VToffle/vtoffle-hand.png",
+  },
+  {
+    title: "VToffle",
+    desc: "Max deux lignes raconte pas ta vie",
+    imagePath: "../assets/projects/VToffle/vtoffle-hand.png",
+  },
+]
+
+</script>
 
 <template>
   <div class="projects">
@@ -6,23 +42,9 @@
       <h2>Projects</h2>
     </div>
     <div class="project-grid">
-        <div class="project">
-            <div class="project-card">
-                <h4>VToffle</h4>
-                <p>Description rapide raconte pas ta vie</p>
-                <img src="../assets/projects/VToffle/vtoffle-hand.png" alt="vtoffle-presentation">
-            </div>
-        </div>
-        <div class="project">
-            <h4>VToffle</h4>
-            <p>Description rapide raconte pas ta vie</p>
-            <img src="../assets/projects/VToffle/vtoffle-hand.png" alt="vtoffle-presentation">
-        </div>
-        <div class="project">
-            <h4>VToffle</h4>
-            <p>Description rapide raconte pas ta vie</p>
-            <img src="../assets/projects/VToffle/vtoffle-hand.png" alt="vtoffle-presentation">
-        </div>
+      <div v-for="project in projects">
+        <TheProject :title="project.title" :desc="project.desc" :imagePath="project.imagePath" />
+      </div>
     </div>
   </div>
 </template>
