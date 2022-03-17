@@ -7,7 +7,8 @@ const route = useRoute();
 const projet = projects.projects.find(project => project.idProject.toString() == route.params.id)
 
 function getImageUrl(name: any) {
-    return new URL(name, import.meta.url).href
+    
+    return new URL(`/projects/VToffle/${name}`, import.meta.url).href
 }
 
 </script>
@@ -31,7 +32,8 @@ function getImageUrl(name: any) {
                     <p id="info"><span>State :</span> {{ projet?.detailState }}</p>
                 </div>
             </div>
-            <img :src="getImageUrl(projet?.detailImagePath)" />
+            <!-- getImageUrl(projet?.detailImagePath) -->
+            <img :src="projet?.detailImagePath" />
         </div>
     </div>
 </template>

@@ -15,7 +15,8 @@ function getImageUrl(name: any) {
 
 <template>
       <div class="skill">
-        <img :src="getImageUrl(props.imagePath)" :alt="props.caption" />
+        <!-- getImageUrl(props.imagePath) -->
+        <img :src="props.imagePath" :alt="props.caption" />
         <h3 class="skill-name">{{props.skillName}}</h3>
         <p>{{props.paragraph}}</p>
       </div>

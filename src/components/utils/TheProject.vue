@@ -63,7 +63,8 @@ function getImageUrl(name: any) {
         <a href="">
             <h4>{{ props.title }}</h4>
             <p>{{ props.desc }}</p>
-            <img :src="getImageUrl(props.imagePath)" />
+            <!-- getImageUrl(props.imagePath) -->
+            <img :src="props.imagePath" />
         </a>
         </div>
     </div>
