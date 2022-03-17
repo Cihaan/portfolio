@@ -1,19 +1,41 @@
 <script setup lang="ts">
 
+import { onMounted } from 'vue';
+
 const props = defineProps({
+    idProject: Number,
     title: String,
     desc: String,
-    imagePath: String
+    imagePath: String,
+    cardColor: String
 })
+
+const on = onMounted(() => {
+    let idProjet = props.idProject
+    let cardcol = props.cardColor
+
+    if (idProjet != undefined) {
+        let elem = document.getElementById(idProjet.toString())
+        if (elem != undefined) {
+            let cardcol = props.cardColor
+
+            if (cardcol != undefined) {
+                elem.style.backgroundColor = '#' + cardcol
+            }
+
+        }
+    }
+})
+
 
 </script>
 
 <template>
     <div class="project">
-        <div class="project-card">
-            <h4>{{props.title}}</h4>
-            <p>{{props.desc}}</p>
-            <img :src="props.imagePath">
+        <div :id="props.idProject?.toString()" class="project-card">
+            <h4>{{ props.title }}</h4>
+            <p>{{ props.desc }}</p>
+            <img :src="props.imagePath" />
         </div>
     </div>
 </template>
@@ -22,7 +44,6 @@ const props = defineProps({
 $white: #fff;
 $red: #fa4454;
 $black: #000;
-
 
 .project {
     height: 400px;
@@ -33,15 +54,13 @@ $black: #000;
 }
 
 .project-card {
-    background-color: #C4F6DE;
     width: 65%;
     align-self: center;
     height: 100%;
-    // flex-grow: 1;
 }
 
 h4 {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-weight: 500;
     font-size: 20px;
     text-align: left;
@@ -58,5 +77,4 @@ p {
     font-weight: 350;
     margin: 0px 0px 30px 25px;
 }
-
 </style>

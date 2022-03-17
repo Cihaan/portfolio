@@ -3,34 +3,46 @@ import TheProject from './utils/TheProject.vue';
 
 const projects = [
   {
+    idProject: 1,
     title: "VToffle",
     desc: "Max deux lignes raconte pas ta vie",
     imagePath: "../assets/projects/VToffle/vtoffle-hand.png",
+    cardColor: "C4F6DE"
   },
   {
+    idProject: 2,
     title: "VToffle",
     desc: "Max deux lignes raconte pas ta vie",
     imagePath: "../assets/projects/VToffle/vtoffle-hand.png",
+    cardColor: "EB8E88"
   },
   {
+    idProject: 3,
     title: "VToffle",
     desc: "Max deux lignes raconte pas ta vie",
     imagePath: "../assets/projects/VToffle/vtoffle-hand.png",
+    cardColor: "86689E"
   },
   {
+    idProject: 4,
     title: "VToffle",
     desc: "Max deux lignes raconte pas ta vie",
     imagePath: "../assets/projects/VToffle/vtoffle-hand.png",
+    cardColor: "DFDFDF"
   },
   {
+    idProject: 5,
     title: "VToffle",
     desc: "Max deux lignes raconte pas ta vie",
     imagePath: "../assets/projects/VToffle/vtoffle-hand.png",
+    cardColor: "8CF2A9"
   },
   {
+    idProject: 6,
     title: "VToffle",
     desc: "Max deux lignes raconte pas ta vie",
     imagePath: "../assets/projects/VToffle/vtoffle-hand.png",
+    cardColor: "96C4E4"
   },
 ]
 
@@ -43,7 +55,7 @@ const projects = [
     </div>
     <div class="project-grid">
       <div v-for="project in projects">
-        <TheProject :title="project.title" :desc="project.desc" :imagePath="project.imagePath" />
+        <TheProject :idProject="project.idProject" :title="project.title" :desc="project.desc" :imagePath="project.imagePath" :cardColor="project.cardColor" />
       </div>
     </div>
   </div>
