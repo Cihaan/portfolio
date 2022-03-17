@@ -1,12 +1,17 @@
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 
+async function goLanding(): Promise<void> {
+    await router.push({path: "/landing"})
+}
 
 </script>
 
 <template>
     <header id="header">
-        <img src="../../assets/ck/ck_logo.png" alt="logo" />
+        <img src="../../assets/ck/ck_logo.png" @click="goLanding" alt="logo" />
         <ul class="navigation">
             <li>
                 <router-link exact-active-class="active" to="/about">About</router-link>

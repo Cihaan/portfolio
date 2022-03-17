@@ -71,36 +71,38 @@ $black: #000;
     text-align: center;
     align-items: center;
     display: grid;
+    grid-row-gap: 80px;
 }
 
-.project {
-    height: 400px;
-    padding: 0px 25px 60px 0px;
-}
+// .project {
+//     height: 400px;
+//     gap: 60px;
+//     // padding: 0px 25px 60px 0px;
+// }
 
-.project-card {
-    background-color: #C4F6DE;
-    width: 100%;
-}
+// .project-card {
+//     background-color: #C4F6DE;
+//     width: 100%;
+// }
 
-h4 {
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    text-align: left;
-    margin: 30px 0px 15px 25px;
-}
+// h4 {
+//     font-family: 'Ubuntu', sans-serif;
+//     font-weight: 500;
+//     font-size: 20px;
+//     text-align: left;
+//     margin: 30px 0px 15px 25px;
+// }
 
-img {
-    width: 250px;
-    bottom: 0;
-}
+// img {
+//     width: 250px;
+//     bottom: 0;
+// }
 
-p {
-    text-align: left;
-    font-weight: 350;
-    margin: 0px 0px 30px 25px;
-}
+// p {
+//     text-align: left;
+//     font-weight: 350;
+//     margin: 0px 0px 30px 25px;
+// }
 
 
 

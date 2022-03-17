@@ -26,12 +26,18 @@ $black: #000;
 
 .project {
     height: 400px;
-    padding: 0px 25px 60px 0px;
+    // padding: 0px 25px 60px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-card {
     background-color: #C4F6DE;
-    width: 100%;
+    width: 65%;
+    align-self: center;
+    height: 100%;
+    // flex-grow: 1;
 }
 
 h4 {
