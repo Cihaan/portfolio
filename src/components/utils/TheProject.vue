@@ -78,12 +78,15 @@ a {
     text-decoration: none;
     color: $black;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .project {
     height: 400px;
     display: flex;
     justify-content: center;
+    align-items: center;
     align-items: center;
 }
 
@@ -96,7 +99,6 @@ a {
     justify-content: center;
     -webkit-box-shadow: 0px 6px 4px 0px rgba(0,0,0,0.50); 
     box-shadow: 0px 6px 4px 0px rgba(0,0,0,0.50);
-    // align-items: center;
 }
 
 h4 {
@@ -105,11 +107,13 @@ h4 {
     font-size: 20px;
     text-align: left;
     margin: 30px 0px 15px 25px;
+    // flex: 1;
 }
 
 img {
     width: 250px;
     margin: auto;
+    bottom: 0;
 }
 
 p {
