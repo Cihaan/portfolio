@@ -34,7 +34,7 @@ $white: #fff;
 
 .container {
     height: 100%;
-    margin: 140px 54px 54px 54px;
+    margin: 140px 200px 54px 200px;
     z-index: 1;
 }
 

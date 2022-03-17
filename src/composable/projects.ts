@@ -8,10 +8,10 @@ export default {
           imagePath: "../../assets/projects/VToffle/vtoffle-hand.png",
           cardColor: "C4F6DE",
           detailImagePath: "../assets/projects/VToffle/vtoffle-detail.png",
-          detailDescription: "",
+          detailDescription: "VToffle is a web application made to answer the problem 'What to watch'. It is a sequel to my precedent project 'Toffle'. This project was made to prepare myself for an internship, which requires to know a little bit of Vue and APIs. The point of this project was to gain skills by rewriting the entire app which initially was in Angular and adding new features. ",
           detailTeam: 1,
           detailTechnologies: ["Vue", "Scss", "TypeScript", "Vite", "Prisma", "Nodejs", "PostgreSQL", "API", "Docker"],
-          detailDuration: "2 weeks",
+          detailDuration: "1 month",
           detailState: "In progress"
         },
         {
