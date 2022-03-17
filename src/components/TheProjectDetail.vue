@@ -1,14 +1,29 @@
 <script setup lang="ts">
+import projects from '../composable/projects';
+import { useRoute } from 'vue-router';
 
-const props = defineProps({
-    project: Object
-})
+const route = useRoute();
+
+const projet = projects.projects.find( project => project.idProject.toString() == route.params.id)
+
 
 </script>
 
 <template>
 <div class="project">
-    
+    <div class="title">
+        <h2>{{projet?.title}}</h2>
+    </div>
+    <div class="detail">
+        <img :src="projet?.detailImagePath">
+        <p>Desc = {{projet?.detailDescription}}</p>
+        <div class="technologies">
+            <p v-for="tech in projet?.detailTechnologies"> Tech = {{tech}}</p>
+        </div>
+        <p>Duration : {{projet?.detailDuration}}</p>
+        <p>Teams Member : {{projet?.detailTeam}}</p>
+        <p>State : {{projet?.detailState}}</p>
+    </div>
 </div>
 </template>
 
@@ -17,38 +32,9 @@ $white: #fff;
 $red: #fa4454;
 $black: #000;
 
-
 .project {
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100vh;
 }
 
-.project-card {
-    background-color: #C4F6DE;
-    width: 65%;
-    align-self: center;
-    height: 100%;
-}
-
-h4 {
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    text-align: left;
-    margin: 30px 0px 15px 25px;
-}
-
-img {
-    width: 250px;
-    bottom: 0;
-}
-
-p {
-    text-align: left;
-    font-weight: 350;
-    margin: 0px 0px 30px 25px;
-}
 
 </style>

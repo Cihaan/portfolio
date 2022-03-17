@@ -1,6 +1,11 @@
 <script setup lang="ts">
 
 import { onMounted } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+
 
 const props = defineProps({
     idProject: Number,
@@ -9,6 +14,19 @@ const props = defineProps({
     imagePath: String,
     cardColor: String
 })
+
+async function seeDetails(event: Event): Promise<void> {
+    let id;
+
+    if ((event.target as HTMLInputElement).getAttribute("id") != null) {
+        id = (event.target as HTMLInputElement).getAttribute("id")
+    }
+    else {
+        id = (event.target as HTMLInputElement).parentElement?.getAttribute("id");
+    }
+
+    await router.push({path: `/project/${id}`})
+}
 
 const on = onMounted(() => {
     let idProjet = props.idProject
@@ -32,7 +50,7 @@ const on = onMounted(() => {
 
 <template>
     <div class="project">
-        <div :id="props.idProject?.toString()" class="project-card">
+        <div :id="props.idProject?.toString()" @click="seeDetails($event)" class="project-card">
             <h4>{{ props.title }}</h4>
             <p>{{ props.desc }}</p>
             <img :src="props.imagePath" />
@@ -47,7 +65,6 @@ $black: #000;
 
 .project {
     height: 400px;
-    // padding: 0px 25px 60px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,6 +74,10 @@ $black: #000;
     width: 65%;
     align-self: center;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
 }
 
 h4 {
@@ -69,7 +90,7 @@ h4 {
 
 img {
     width: 250px;
-    bottom: 0;
+    margin: auto;
 }
 
 p {

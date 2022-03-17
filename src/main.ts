@@ -8,6 +8,7 @@ import TheAbout from './components/TheAbout.vue'
 import TheSkills from './components/TheSkills.vue'
 import TheProjects from './components/TheProjects.vue'
 import TheWorkInProgress from './components/utils/TheWorkInProgress.vue'
+import TheProjectDetail from './components/TheProjectDetail.vue'
 
 const app = createApp(App)
 
@@ -18,6 +19,7 @@ const router = createRouter({
       { path: '/about', component: TheAbout },
       { path: '/skills', component: TheSkills },
       { path: '/projects', component: TheProjects },
+      { path: '/project/:id', component: TheProjectDetail },
       { path: '/photos', component: TheWorkInProgress }
     ],
   })
