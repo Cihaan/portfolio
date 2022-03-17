@@ -6,6 +6,9 @@ const route = useRoute();
 
 const projet = projects.projects.find( project => project.idProject.toString() == route.params.id)
 
+function getImageUrl(name: any) {
+  return new URL(name, import.meta.url).href
+}
 
 </script>
 
@@ -15,7 +18,7 @@ const projet = projects.projects.find( project => project.idProject.toString() =
         <h2>{{projet?.title}}</h2>
     </div>
     <div class="detail">
-        <img :src="projet?.detailImagePath">
+        <img :src="getImageUrl(projet?.detailImagePath)">
         <p>Desc = {{projet?.detailDescription}}</p>
         <div class="technologies">
             <p v-for="tech in projet?.detailTechnologies"> Tech = {{tech}}</p>

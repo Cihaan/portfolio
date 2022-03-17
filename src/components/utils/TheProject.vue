@@ -22,7 +22,12 @@ async function seeDetails(event: Event): Promise<void> {
         id = (event.target as HTMLInputElement).getAttribute("id")
     }
     else {
-        id = (event.target as HTMLInputElement).parentElement?.getAttribute("id");
+        if ((event.target as HTMLInputElement).parentElement?.getAttribute("id")!= null) {
+            id = (event.target as HTMLInputElement).parentElement?.getAttribute("id");
+        }
+        else {
+            id = (event.target as HTMLInputElement).parentElement?.parentElement?.getAttribute("id");
+        }
     }
 
     await router.push({path: `/project/${id}`})
@@ -56,7 +61,6 @@ function getImageUrl(name: any) {
     <div class="project">
         <div :id="props.idProject?.toString()" @click="seeDetails($event)" class="project-card">
         <a href="">
-
             <h4>{{ props.title }}</h4>
             <p>{{ props.desc }}</p>
             <img :src="getImageUrl(props.imagePath)" />
