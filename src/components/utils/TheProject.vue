@@ -43,17 +43,24 @@ const on = onMounted(() => {
 
         }
     }
+
 })
 
+function getImageUrl(name: any) {
+  return new URL(name, import.meta.url).href
+}
 
 </script>
 
 <template>
     <div class="project">
         <div :id="props.idProject?.toString()" @click="seeDetails($event)" class="project-card">
+        <a href="">
+
             <h4>{{ props.title }}</h4>
             <p>{{ props.desc }}</p>
-            <img :src="props.imagePath" />
+            <img :src="getImageUrl(props.imagePath)" />
+        </a>
         </div>
     </div>
 </template>
@@ -62,6 +69,12 @@ const on = onMounted(() => {
 $white: #fff;
 $red: #fa4454;
 $black: #000;
+
+a {
+    text-decoration: none;
+    color: $black;
+    width: 100%;
+}
 
 .project {
     height: 400px;
@@ -77,6 +90,8 @@ $black: #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    -webkit-box-shadow: 0px 6px 4px 0px rgba(0,0,0,0.50); 
+    box-shadow: 0px 6px 4px 0px rgba(0,0,0,0.50);
     // align-items: center;
 }
 

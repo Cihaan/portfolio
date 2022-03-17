@@ -7,11 +7,15 @@ const props = defineProps({
   caption: String,
 })
 
+function getImageUrl(name: any) {
+  return new URL(name, import.meta.url).href
+}
+
 </script>
 
 <template>
       <div class="skill">
-        <img :src="props.imagePath" :alt="props.caption" />
+        <img :src="getImageUrl(props.imagePath)" :alt="props.caption" />
         <h3 class="skill-name">{{props.skillName}}</h3>
         <p>{{props.paragraph}}</p>
       </div>
