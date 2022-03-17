@@ -8,7 +8,7 @@
 <div class="work">
     <h1>Work in Progress</h1>
     <p>Come back later</p>
-    <img src="../../assets/icons/work.svg" alt="work in progress">
+    <img src="../../assets/work.svg" alt="work in progress">
 </div>
 </template>
 
