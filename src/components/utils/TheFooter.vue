@@ -39,10 +39,10 @@ $red: #fa4454;
 $black: #000;
 
 .footer {
-    position: absolute;
+    // position: absolute;
     display: flex;
     flex-direction: column;
-    padding: 40px 67px 0 67px;
+    padding: 0px 67px 0 67px;
     margin: 0px -55px 0px -55px;
     width: 100%;
     background-color: $red;

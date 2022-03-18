@@ -9,26 +9,18 @@ var age = new Date().getFullYear() - 2002;
     <div class="title">
       <h2>About</h2>
     </div>
-      <div class="bio">
-        <img src="../assets/ck/ck_pp.png" alt="profile_picture" />
-        <div class="text">
+    <div class="bio">
+      <img src="../assets/ck/ck_pp.png" alt="profile_picture" />
+      <div class="text">
         <p id="hi">
-        Hi I am <span>Cihan</span> !
+          Hi I am
+          <span>Cihan</span> !
         </p>
-          <p>
-            I am {{ age }}, I live in
-            <span>France</span> at Mâcon. <br>  Currently studiying
-            <span>computer science</span> at IUT of Dijon. <br> I will integrate
-            <span>ESGI Lyon</span> in web engineering next year. <br> I am
-            passionate about <span>web</span> programming, <span>photography</span>
-            and <span>cats</span>. <br> I make projects such as
-            <span>web sites</span>, <span>web apps</span> and
-            <span>softwares</span> to have fun. <br> Currently seeking for a
-            <span>work-study contract</span> don't hesitate to contact me if
-            you're <span>interested</span> in my profile.
-          </p>
-        </div>
+        <p>
+          I am {{ age }}, I live in <span>France</span> at Mâcon. Currently studiying <span>computer science</span> at IUT of Dijon. I will integrate <span>ESGI Lyon</span> in web engineering next year. I am passionate about <span>web</span> programming, <span>photography</span> and <span>cats</span>. I make projects such as <span>web sites</span>, <span>web apps</span> and <span>softwares</span> to have fun. Currently seeking for a <span>work-study contract</span> don't hesitate to contact me if you're <span>interested</span> in my profile.
+        </p>
       </div>
+    </div>
   </div>
 </template>
 
@@ -40,8 +32,8 @@ $black: #000;
 .about {
   position: relative;
   height: 100vh;
-  -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .bio {
@@ -51,7 +43,7 @@ $black: #000;
   justify-content: space-between;
   align-items: center;
   padding-top: 70px;
-} 
+}
 
 .bio img {
   width: 250px;
@@ -66,10 +58,89 @@ $black: #000;
 
 p {
   font-size: 24px;
+  text-align: justify;
+  text-align-last: center;
+  line-height: 1.5;
 }
 
 #hi {
   margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 900px) {
+  
+.bio {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 70px;
+}
+
+.bio img {
+  width: 200px;
+}
+
+.text {
+  width: 100%;
+  max-width: 53%;
+  text-align: center;
+  margin-top: 25px;
+}
+
+p {
+  font-size: 20px;
+  text-align: justify;
+  text-align-last: center;
+  line-height: 1.5;
+}
+
+#hi {
+  margin-bottom: 10px;
+}
+}
+
+@media only screen and (max-width: 640px) {
+  .about {
+    position: relative;
+    height: 100vh;
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  }
+
+  .bio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 70px;
+  }
+
+  .bio img {
+    width: 150px;
+  }
+
+  .text {
+    width: 100%;
+    max-width: 80%;
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  p {
+    font-size: 18px;
+    text-align: justify;
+    text-align-last: center;
+    letter-spacing: 0px;
+    line-height: 1.5;
+  }
+
+  #hi {
+    margin-bottom: 10px;
+    text-align: center;
+  }
 }
 
 /* ----------------------------------------------
@@ -100,5 +171,4 @@ p {
     opacity: 1;
   }
 }
-
 </style>

@@ -122,4 +122,13 @@ p {
     font-weight: 350;
     margin: 0px 0px 30px 25px;
 }
+
+@media only screen and (max-width: 640px) {
+    img {
+    width: 150px;
+    margin: auto;
+    bottom: 0;
+}
+}
+
 </style>

@@ -26,7 +26,7 @@ $black: #000;
 
 .skills {
   position: relative;
-  height: 140vh;
+  height: 100vh;
   -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   text-align: center;
@@ -42,6 +42,30 @@ $black: #000;
   align-items: center;
 	-webkit-animation: slide-in-blurred-bottom 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 	        animation: slide-in-blurred-bottom 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+@media only screen and (max-width: 640px) {
+  
+.skills {
+  position: relative;
+  height: 100vh;
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  text-align: center;
+}
+
+.skills-grid {
+  width: 100%;
+  position: absolute;
+  padding-top: 70px;
+  display: grid;
+  grid-template-columns: 33.3333333333333333333333333333333333333333333333333333333333333333333333% 33.3333333333333333333333333333333333333333333333333333333333333333333333% 33.3333333333333333333333333333333333333333333333333333333333333333333333%;
+  text-align: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+	-webkit-animation: slide-in-blurred-bottom 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	        animation: slide-in-blurred-bottom 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
 }
 
 // #prisma {

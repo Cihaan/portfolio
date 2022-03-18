@@ -49,7 +49,7 @@ export default {
           detailImagePath: "/projects/leDeclic/leDeclic-detail.png",
           detailDescription: "leDeclic is a project and resource management software made for a school project. It is a software that involves Authentication and DAO Pattern. This project was a school project and involved meetings with a Client and a Project Manager, and an organization. The point of this project was to gain skills, learn how to organize within a team and practice the object oriented language that is Java .",
           detailTeam: 1,
-          detailTechnologies: ["java", "JavaFX", "MySQL"],
+          detailTechnologies: ["Java", "JavaFX", "MySQL"],
           detailDuration: "3 months",
           detailState: "Done"
         },
@@ -74,9 +74,10 @@ export default {
           cardColor: "96C4E4",
           detailImagePath: "/projects/myDrugs/mydrugs-detail.png",
           detailDescription: "This project is a showcase site for a fictional drugstore. It was made with WordPress, with a classmate, and involved the management of WordPress extensions. This project was a school project. The point of this project was to gain skills, learn how to manipulate and add WordPress exertions to a site.",
-          detailTeam: 1,
-          detailTechnologies: ["WordPress"],
-          detailDuration: "2 weeks"
+          detailTeam: 2,
+          detailTechnologies: ["WordPress", "CSS"],
+          detailDuration: "2 weeks",
+          detailState: "Done"
         },
       ]
 }

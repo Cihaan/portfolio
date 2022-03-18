@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import TheNavBar from './components/utils/TheNavBar.vue';
 import TheFooter from './components/utils/TheFooter.vue';
+
 </script>
 
 <template>
     <div class="container">
         <TheNavBar />
         <router-view></router-view>
-    <!-- <TheFooter /> -->
+        <!-- <TheFooter /> -->
     </div>
 </template>
 
@@ -69,6 +70,51 @@ p {
 
 span {
     color: $red;
+}
+
+
+@media only screen and (max-width: 640px) {
+    .container {
+        padding: 0px;
+        margin: 0px;
+        margin-bottom: 40px;
+        height: 100%;
+        width: 100%;
+    }
+
+    
+h2 {
+    color: $red;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1px;
+    font-weight: 400;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    margin-top: 0px;
+    width: 1px;
+    height: 1.5px;
+    background: $red;
+}
+
+p {
+    letter-spacing: 2.75;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+span {
+    color: $red;
+}
 }
 
 </style>

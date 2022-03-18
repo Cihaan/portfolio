@@ -29,6 +29,10 @@ $black: #000;
 	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
+// @media only screen and (mins-width: 640px) {
+  
+// }
+
 h1 {
     color: $red;
     letter-spacing: 3px;
@@ -40,7 +44,7 @@ p {
     letter-spacing: 1.75;
 }
 
-img {
+.work img {
     width: 100px;
     filter: invert(30%) sepia(92%) saturate(1511%) hue-rotate(331deg) brightness(104%) contrast(94%);
 }

@@ -15,12 +15,12 @@ const app = createApp(App)
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-      { path: '/:pathMatch(.*)*', component: TheLanding },
       { path: '/about', component: TheAbout },
       { path: '/skills', component: TheSkills },
       { path: '/projects', component: TheProjects },
       { path: '/project/:id', component: TheProjectDetail },
-      { path: '/photos', component: TheWorkInProgress }
+      { path: '/photos', component: TheWorkInProgress },
+      { path: '/:pathMatch(.*)*', component: TheLanding }
     ],
   })
 
