@@ -59,6 +59,10 @@ $black: #000;
   width: 100%;
 }
 
+.title {
+  padding-top: 70px;
+}
+
 .project-grid {
     width: 100%;
     position: absolute;
@@ -82,6 +86,7 @@ $black: #000;
   animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   text-align: center;
   width: 100%;
+  padding-bottom: 210vh;
 }
 
 .project-grid {

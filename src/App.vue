@@ -86,7 +86,7 @@ span {
 h2 {
     color: $red;
     font-family: "Ubuntu", sans-serif;
-    font-size: 1px;
+    font-size: 25px;
     font-weight: 400;
 }
 
@@ -94,7 +94,7 @@ h2::after {
     content: "";
     display: block;
     margin-top: 0px;
-    width: 1px;
+    width: 100%;
     height: 1.5px;
     background: $red;
 }

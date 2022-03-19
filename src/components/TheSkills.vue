@@ -54,6 +54,10 @@ $black: #000;
   text-align: center;
 }
 
+.title {
+  padding-top: 70px;
+}
+
 .skills-grid {
   width: 100%;
   position: absolute;

@@ -104,6 +104,7 @@ p {
 @media only screen and (max-width: 640px) {
   .about {
     position: relative;
+    padding: 15px;
     height: 100vh;
     -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
     animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -118,15 +119,26 @@ p {
     padding-top: 70px;
   }
 
+ .title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-top: 70px;
+  height: 25px;
+}
+
   .bio img {
     width: 150px;
   }
 
   .text {
     width: 100%;
-    max-width: 80%;
+    max-width: 100%;
     text-align: center;
-    margin-top: 25px;
+    font-size: 10px;
   }
 
   p {
