@@ -25,7 +25,8 @@ $white: #fff;
 $red: #fa4454;
 $black: #000;
   
-.projects {
+  @media only screen and (min-width: 1600px) {
+    .projects {
   position: relative;
   height: 120vh;
   -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
@@ -44,6 +45,8 @@ $black: #000;
     display: grid;
     grid-row-gap: 80px;
 }
+  }
+
 
 @media only screen and (max-width: 900px) {
   
@@ -70,7 +73,7 @@ $black: #000;
 }
 }
 
-@media only screen and (min-width: 900px) {
+@media (min-width:900px) and (max-width:1600px) {
   
 .projects {
   position: relative;
