@@ -2,6 +2,10 @@
 
 var age = new Date().getFullYear() - 2002;
 
+function open(): void {
+  window.open("./resume.pdf")
+}
+
 </script>
 
 <template>
@@ -20,6 +24,7 @@ var age = new Date().getFullYear() - 2002;
           I am {{ age }}, I live in <span>France</span> at Mâcon. Currently studiying <span>computer science</span> at IUT of Dijon. I will integrate <span>ESGI Lyon</span> in web engineering next year. I am passionate about <span>web</span> programming, <span>photography</span> and <span>cats</span>. I make projects such as <span>web sites</span>, <span>web apps</span> and <span>softwares</span> to have fun. Currently seeking for a <span>work-study contract</span> don't hesitate to contact me if you're <span>interested</span> in my profile.
         </p>
       </div>
+      <router-link id="resume" @click="open" to="">Show Resume</router-link>
     </div>
   </div>
 </template>
@@ -28,6 +33,27 @@ var age = new Date().getFullYear() - 2002;
 $white: #fff;
 $red: #fa4454;
 $black: #000;
+
+#resume {
+  text-decoration: none;
+  padding: 10px;
+  color: $red;
+  font-size: 22px;
+  border: $red 3px solid;
+  border-radius: 25px;
+  margin-top: 20px;
+}
+
+#resume:hover {
+  -webkit-animation-name: goToRed;
+  -webkit-animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+@keyframes goToRed {
+  from {background-color: $white; color: $red;}
+  to {background-color: $red; color: $white;}
+}
 
 .about {
   position: relative;
