@@ -27,8 +27,3 @@ const router = createRouter({
 app.use(router)
 
 app.mount('#app')
-
-/* TO USE FONTS : 
-font-family: 'Roboto', sans-serif;
-font-family: 'Ubuntu', sans-serif;
-*/

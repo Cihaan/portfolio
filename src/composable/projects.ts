@@ -1,4 +1,3 @@
-import a from '../assets/projects/VToffle/vtoffle-hand.png'
 export default {
     projects : [
         {
