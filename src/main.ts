@@ -9,6 +9,7 @@ import TheSkills from './components/TheSkills.vue'
 import TheProjects from './components/TheProjects.vue'
 import TheWorkInProgress from './components/utils/TheWorkInProgress.vue'
 import TheProjectDetail from './components/TheProjectDetail.vue'
+import TheSiteMap from './components/utils/TheSiteMap.vue'
 
 const app = createApp(App)
 
@@ -20,6 +21,7 @@ const router = createRouter({
       { path: '/projects', component: TheProjects },
       { path: '/project/:id', component: TheProjectDetail },
       { path: '/photos', component: TheWorkInProgress },
+      { path: '/sitemap', component: TheSiteMap },
       { path: '/:pathMatch(.*)*', component: TheLanding }
     ],
   })
