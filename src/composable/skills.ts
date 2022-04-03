@@ -9,7 +9,7 @@ export default {
         {
           skillName: "React",
           imagePath: "/icons/skills/react.svg",
-          paragraph: "Good understanding of the framework",
+          paragraph: "Intermediate understanding of the framework",
           caption: "react icon"
         },
         {
