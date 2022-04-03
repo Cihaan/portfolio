@@ -38,8 +38,10 @@ function open(): void {
       </div>
       <router-link id="resume" @click="open" to>Show Resume</router-link>
     </div>
+  <div>
+    <TheFooter />
   </div>
-  <TheFooter />
+  </div>
 </template>
 
 <style lang="scss" scoped>

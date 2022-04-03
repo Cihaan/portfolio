@@ -7,6 +7,51 @@ async function goLanding(): Promise<void> {
     await router.push({ path: "/landing" })
 }
 
+
+var mq = window.matchMedia("(max-width: 640px)");
+if (mq.matches) {
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        let currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            let nav = document.getElementById("header")
+            if (nav) {
+                if (nav.style.display == "flex") {
+                    nav.style.display = "flex";
+                }
+            }
+        } else {
+            let nav = document.getElementById("header")
+            if (nav) {
+                nav.style.display = "none";
+            }
+        }
+        prevScrollpos = currentScrollPos;
+    }
+}
+else {
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        let currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            let nav = document.getElementById("header")
+            if (nav) {
+                if (nav.style.display != "flex") {
+                    nav.style.display = "flex";
+                }
+            }
+        } else {
+            let nav = document.getElementById("header")
+            if (nav) {
+                nav.style.display = "none";
+            }
+        }
+        prevScrollpos = currentScrollPos;
+    }
+}
+
+
+
 function toggleMenu(): void {
     var menuList = document.getElementById("header")
 
@@ -130,8 +175,10 @@ a:hover::after,
         z-index: 10000;
         min-height: 0px;
         background-color: $red;
-        -webkit-animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand-fwd-top 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        -webkit-animation: tracking-in-expand-fwd-top 0.8s
+            cubic-bezier(0.215, 0.61, 0.355, 1) both;
+        animation: tracking-in-expand-fwd-top 0.8s
+            cubic-bezier(0.215, 0.61, 0.355, 1) both;
     }
 
     #logo {
@@ -200,37 +247,35 @@ a:hover::after,
  * ----------------------------------------
  */
 @-webkit-keyframes tracking-in-expand-fwd-top {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px) translateY(-500px);
-            transform: translateZ(-700px) translateY(-500px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0) translateY(0);
-            transform: translateZ(0) translateY(0);
-    opacity: 1;
-  }
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-transform: translateZ(-700px) translateY(-500px);
+        transform: translateZ(-700px) translateY(-500px);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        -webkit-transform: translateZ(0) translateY(0);
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
+    }
 }
 @keyframes tracking-in-expand-fwd-top {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px) translateY(-500px);
-            transform: translateZ(-700px) translateY(-500px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0) translateY(0);
-            transform: translateZ(0) translateY(0);
-    opacity: 1;
-  }
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-transform: translateZ(-700px) translateY(-500px);
+        transform: translateZ(-700px) translateY(-500px);
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        -webkit-transform: translateZ(0) translateY(0);
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
+    }
 }
-
-
 </style>
