@@ -8,7 +8,6 @@ import TheFooter from './components/utils/TheFooter.vue';
     <div class="container">
         <TheNavBar />
         <router-view></router-view>
-        <!-- <TheFooter /> -->
     </div>
 </template>
 

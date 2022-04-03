@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import TheFooter from '../components/utils/TheFooter.vue';
 
 var age = new Date().getFullYear() - 2002;
 
@@ -21,12 +22,24 @@ function open(): void {
           <span>Cihan</span> !
         </p>
         <p>
-          I am {{ age }}, I live in <span>France</span> at Mâcon. Currently studiying <span>computer science</span> at IUT of Dijon. I will integrate <span>ESGI Lyon</span> in web engineering next year. I am passionate about <span>web</span> programming, <span>photography</span> and <span>cats</span>. I make projects such as <span>web sites</span>, <span>web apps</span> and <span>softwares</span> to have fun. Currently seeking for a <span>work-study contract</span> don't hesitate to contact me if you're <span>interested</span> in my profile.
+          I am {{ age }}, I live in
+          <span>France</span> at Mâcon. Currently studiying
+          <span>computer science</span> at IUT of Dijon. I will integrate
+          <span>ESGI Lyon</span> in web engineering next year. I am passionate about
+          <span>web</span> programming,
+          <span>photography</span> and
+          <span>cats</span>. I make projects such as
+          <span>web sites</span>,
+          <span>web apps</span> and
+          <span>softwares</span> to have fun. Currently seeking for a
+          <span>work-study contract</span> don't hesitate to contact me if you're
+          <span>interested</span> in my profile.
         </p>
       </div>
-      <router-link id="resume" @click="open" to="">Show Resume</router-link>
+      <router-link id="resume" @click="open" to>Show Resume</router-link>
     </div>
   </div>
+  <TheFooter />
 </template>
 
 <style lang="scss" scoped>
@@ -51,8 +64,14 @@ $black: #000;
 }
 
 @keyframes goToRed {
-  from {background-color: $white; color: $red;}
-  to {background-color: $red; color: $white;}
+  from {
+    background-color: $white;
+    color: $red;
+  }
+  to {
+    background-color: $red;
+    color: $white;
+  }
 }
 
 .about {
@@ -94,37 +113,36 @@ p {
 }
 
 @media only screen and (min-width: 900px) {
-  
-.bio {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 70px;
-}
+  .bio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 70px;
+  }
 
-.bio img {
-  width: 200px;
-}
+  .bio img {
+    width: 200px;
+  }
 
-.text {
-  width: 100%;
-  max-width: 53%;
-  text-align: center;
-  margin-top: 25px;
-}
+  .text {
+    width: 100%;
+    max-width: 53%;
+    text-align: center;
+    margin-top: 25px;
+  }
 
-p {
-  font-size: 20px;
-  text-align: justify;
-  text-align-last: center;
-  line-height: 1.5;
-}
+  p {
+    font-size: 20px;
+    text-align: justify;
+    text-align-last: center;
+    line-height: 1.5;
+  }
 
-#hi {
-  margin-bottom: 10px;
-}
+  #hi {
+    margin-bottom: 10px;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -145,16 +163,16 @@ p {
     padding-top: 70px;
   }
 
- .title {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  padding-top: 70px;
-  height: 25px;
-}
+  .title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-top: 70px;
+    height: 25px;
+  }
 
   .bio img {
     width: 150px;

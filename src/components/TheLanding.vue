@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import TheFooter from './utils/TheFooter.vue';
 
 
 </script>
@@ -15,6 +15,7 @@
             </p>
         </div>
     </div>
+    <TheFooter />
 </template>
 
 <style lang="scss" scoped>
