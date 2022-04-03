@@ -7,7 +7,7 @@ const route = useRoute();
 const projet = projects.projects.find(project => project.idProject.toString() == route.params.id)
 
 function getImageUrl(name: any) {
-    
+
     return new URL(`/projects/VToffle/${name}`, import.meta.url).href
 }
 
@@ -20,16 +20,29 @@ function getImageUrl(name: any) {
         </div>
         <div class="wrap">
             <div class="description">
-                <p><span id="info">Description :</span></p>
+                <p>
+                    <span id="info">Description :</span>
+                </p>
                 <p id="para">{{ projet?.detailDescription }}</p>
-                    <p id="info"><span> Technologies :</span></p>
+                <p id="info">
+                    <span>Technologies :</span>
+                </p>
                 <div class="technologies">
                     <p v-for="tech in projet?.detailTechnologies">{{ tech }}</p>
                 </div>
                 <div class="meta">
-                    <p id="info"><span>Duration : </span>{{ projet?.detailDuration }}</p>
-                    <p id="info"><span>Teams Member :</span> {{ projet?.detailTeam }}</p>
-                    <p id="info"><span>State :</span> {{ projet?.detailState }}</p>
+                    <p id="info">
+                        <span>Duration :</span>
+                        {{ projet?.detailDuration }}
+                    </p>
+                    <p id="info">
+                        <span>Teams Member :</span>
+                        {{ projet?.detailTeam }}
+                    </p>
+                    <p id="info">
+                        <span>State :</span>
+                        {{ projet?.detailState }}
+                    </p>
                 </div>
             </div>
             <!-- getImageUrl(projet?.detailImagePath) -->
@@ -45,8 +58,8 @@ $black: #000;
 
 .detail {
     height: 100vh;
-    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-            animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .wrap {
@@ -100,78 +113,80 @@ img {
     max-width: 80%;
 }
 
-@media (max-width:1100px) {
-    
-.detail {
-    height: 100vh;
-    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-            animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
+@media (max-width: 1100px) {
+    .detail {
+        height: 100vh;
+        -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+        animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    }
 
-.title {
-    padding-top: 70px;
-}
+    .title {
+        padding-top: 70px;
+    }
 
-.wrap {
-    display: flex;
-    flex-direction: column-reverse;
-    padding-top: 70px;
-    justify-content: center;
-    text-align: center;
-}
+    .wrap {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 70px;
+        justify-content: center;
+        text-align: center;
+    }
 
-.description {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
+    .description {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
 
-.technologies {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding-right: 0px;
-}
+    .technologies {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding-right: 0px;
+        align-items: center;
+    }
 
-.technologies p {
-    margin: 0px 0px 25px 25px;
-    font-weight: 500;
-    width: 80%;
-}
+    .technologies p {
+        // margin: 5px 2px 5px 2px;
+        margin: auto;
+        margin-bottom: 8px;
+        font-weight: 500;
+        width: 80%;
+    }
 
-img {
-    width: 300px;
-    align-self: center;
-    // flex: 1;
-    // flex-grow: 1;
-}
+    img {
+        width: 300px;
+        align-self: center;
+        // flex: 1;
+        // flex-grow: 1;
+    }
 
-#info {
-    font-size: 20px;
-    padding: 25px 0px 25px 0px;
-}
+    #info {
+        font-size: 20px;
+        padding: 25px 0px 25px 0px;
+    }
 
-.meta {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    align-self: center;
-    flex-grow: 1;
-    padding: 0px 5px 0px 0px;
-    width: 80%;
-}
+    .meta {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        align-self: center;
+        flex-grow: 1;
+        padding: 0px 5px 0px 0px;
+        width: 80%;
+    }
 
-#para {
-    font-size: 20px;
-    letter-spacing: 2.75;
-    text-align: justify;
-    text-align-last: center;
-    padding: 25px 25px 0px 25px;
-    width: 100%;
-    align-self: center;
-    line-height: 1.5;
-    // max-width: 80%;
-}
+    #para {
+        font-size: 20px;
+        letter-spacing: 2.75;
+        text-align: justify;
+        text-align-last: center;
+        padding: 25px 25px 0px 25px;
+        width: 100%;
+        align-self: center;
+        line-height: 1.5;
+        // max-width: 80%;
+    }
 }
 /* ----------------------------------------------
  * Generated by Animista on 2022-3-15 12:28:31
@@ -186,20 +201,19 @@ img {
  * ----------------------------------------
  */
 @-webkit-keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 @keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-
 </style>
