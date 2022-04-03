@@ -7,9 +7,15 @@ export default {
           caption: "vue icon"
         },
         {
+          skillName: "React",
+          imagePath: "/icons/skills/react.svg",
+          paragraph: "Good understanding of the framework",
+          caption: "react icon"
+        },
+        {
           skillName: "Javascript",
           imagePath: "/icons/skills/javascript.svg",
-          paragraph: "Intermediate understanding of the language",
+          paragraph: "Advanced understanding of the language",
           caption: "javascript icon"
         },
         {
@@ -27,7 +33,7 @@ export default {
         {
           skillName: "Java",
           imagePath: "/icons/skills/java.svg",
-          paragraph: "Intermediate understanding of the language",
+          paragraph: "Good understanding of the language",
           caption: "java icon"
         },
         {
@@ -51,7 +57,7 @@ export default {
         {
             skillName: "Vite",
             imagePath: "/icons/skills/vite.svg",
-            paragraph: "Beginner at Vite",
+            paragraph: "Good understanding of the tool Vite",
             caption: "vite icon"
           },
       ]
